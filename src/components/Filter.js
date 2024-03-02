@@ -20,7 +20,7 @@ const Filters = () => {
                                 <span>Hide Filter</span>
                             </> :
                                 <>
-                                    <Image className='mx-1' src={'/assets/right.svg'} alt='left' width={24} height={24} />
+                                    <Image className='mx-1' src={'/assets/right.svg'} alt='left' width={24} height={24} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"/>
                                     <span>Show Filter</span>
                                 </>
                             }

@@ -49,7 +49,7 @@ const Navigation = () => {
           </div>
         </div>
         <div id='responsiveNav' className={classes.responsiveNav}>
-          <div className='absolute md:hidden top-[78px] right-12 flex'>
+          <div className='absolute md:hidden top-[48px] right-12 flex'>
             <Image className='mx-1' src={'/assets/user.svg'} alt='user' width={24} height={24} />
             <select className='outline-none border-none'>
               <option>EN</option>
@@ -57,7 +57,7 @@ const Navigation = () => {
               <option>NL</option>
             </select>
           </div>
-          <ul className='flex flex-col md:flex-row'>
+          <ul className='flex flex-col md:flex-row md:justify-center md:w-full md:my-4'>
             <li className='mx-2 uppercase'>
               <Link href={'/shop'}>Shop</Link>
             </li>

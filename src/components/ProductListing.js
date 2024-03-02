@@ -1,4 +1,4 @@
-import { PRODUCT_LIST } from "@/mock";
+import { PRODUCT_LIST } from "@/constant";
 import ProductCard from "./shared/ProductCard";
 
 function ProductListing() {

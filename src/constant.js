@@ -240,3 +240,46 @@ export const PRODUCT_LIST=[
       }
     }
   ]
+
+export const SIDEBAR_FILTER_ITEMS=[
+  {
+    id:1,
+    title:'ideal for',
+    categories:['men','women', 'Baby & Kids']
+  },
+  {
+    id:2,
+    title:'occasion',
+    categories:['men','women', 'Baby & Kids']
+  },
+  {
+    id:3,
+    title:'Work',
+    categories:['men','women', 'Baby & Kids']
+  },
+  {
+    id:4,
+    title:'Fabric',
+    categories:['men','women', 'Baby & Kids']
+  },
+  {
+    id:5,
+    title:'segment',
+    categories:['men','women', 'Baby & Kids']
+  },
+  {
+    id:6,
+    title:'suitable for',
+    categories:['men','women', 'Baby & Kids']
+  },
+  {
+    id:7,
+    title:'raw materials',
+    categories:['men','women', 'Baby & Kids']
+  },
+  {
+    id:8,
+    title:'pattern',
+    categories:['men','women', 'Baby & Kids']
+  }
+]  
