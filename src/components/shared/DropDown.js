@@ -1,28 +1,8 @@
 import Image from "next/image";
 import { useState } from "react";
-const values = [
-    {
-        text: 'recommended',
-        id: 0
-    },
-    {
-        text: 'Newest first',
-        id: 1
-    },
-    {
-        text: 'popular',
-        id: 2
-    },
-    {
-        text: 'Price : high to low',
-        id: 3
-    },
-    {
-        text: 'Price : low to high',
-        id: 4
-    }
-]
-function DropDown() {
+
+
+function DropDown({ values }) {
     const [isOpen, setIsOpen] = useState(false);
     const [choosenVal, setChoosenVal] = useState(values[0])
     return <div className='relative'>
@@ -32,9 +12,9 @@ function DropDown() {
                 <Image className='mx-1' src={'/assets/down.svg'} alt='down' width={24} height={24} />}
         </button>
         <div className={`z-10 p-4 w-[300px] bg-slate-50 shadow-md transition-all absolute right-3 ${isOpen ? ' opacity-1 top-10' : ' opacity-0 top-[-200px]'}`}>
-            {values.map(value => <div onClick={()=>{setChoosenVal(value);setIsOpen(!isOpen)}} key={value.id} className="flex justify-between">
-               {(value.id===choosenVal.id)? <Image className='mx-1' src={'/assets/check.svg'} alt='heart' width={16} height={16} />:<div></div>}
-                <div className={`uppercase ${(value.id===choosenVal.id)?'font-bold':''}`}>{value.text}</div>
+            {values.map(value => <div onClick={() => { setChoosenVal(value); setIsOpen(!isOpen) }} key={value.id} className="flex justify-between">
+                {(value.id === choosenVal.id) ? <Image className='mx-1' src={'/assets/check.svg'} alt='heart' width={16} height={16} /> : <div></div>}
+                <div className={`uppercase ${(value.id === choosenVal.id) ? 'font-bold' : ''}`}>{value.text}</div>
             </div>)}
         </div>
 

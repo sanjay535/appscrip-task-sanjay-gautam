@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import SidebarFilter from './SidebarFilter';
 import ProductListing from './ProductListing';
 import DropDown from './shared/DropDown';
+import { FILTER_VALUES } from '@/constant';
 
 const Filters = () => {
     const [isFilterOpen, setIsFilterOpen] = useState(false);
@@ -43,7 +44,7 @@ const Filters = () => {
                     <option>recommended</option>
                     <option>Price : low to high</option>
                 </select> */}
-                <DropDown/>
+                <DropDown values={FILTER_VALUES}/>
             </div>
             <hr className='w-full h-[1px] bg-[#E5E5E5]' />
             <div className={`grid ${isFilterOpen ? 'lg:grid-cols-[300px_minmax(900px,_1fr)]' : ''}`}>
