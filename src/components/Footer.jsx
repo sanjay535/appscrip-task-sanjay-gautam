@@ -71,13 +71,13 @@ const Links = ({ links, title }) => {
       <div className='hidden md:block'>
       <h2 className='font-bold text-xl uppercase'>{title}</h2>
       <ul>
-        {links.map(link => <li className='my-2 text-lg'><a href='#'>{link.text}</a></li>)}
+        {links.map((link,i) => <li key={i} className='my-2 text-lg'><a href='#'>{link.text}</a></li>)}
       </ul>
       </div>
       <div className='block md:hidden'>
         <Expandable title={title}>
         <ul>
-        {links.map(link => <li className='my-2 text-lg'><a href='#'>{link.text}</a></li>)}
+        {links.map((link,i) => <li key={i} className='my-2 text-lg'><a href='#'>{link.text}</a></li>)}
       </ul>
         </Expandable>
       </div>
