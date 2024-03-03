@@ -1,15 +1,14 @@
-import React from 'react'
-import Header from './Header'
-import Filters from './Filter'
+import React from 'react';
+import Header from './Header';
+import Filters from './Filter';
 
-const Container = ({products}) => {
-  
+const Container = ({ products }) => {
   return (
     <div>
-      <Header/>
-      <Filters products={products}/>
+      <Header />
+      <Filters products={products} />
     </div>
-  )
-}
+  );
+};
 
-export default Container
+export default Container;

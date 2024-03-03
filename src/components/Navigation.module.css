@@ -1,92 +1,91 @@
 .humberger {
-    position: relative;
-    display: none;
-    left: -40px;
-    top: 8px;
-    width: 30px;
-    height: 20px;
-    z-index: 103;
-    cursor: pointer;
-    transition: right 0.25s ease-in-out;
-  }
-  
-  .humberger span {
-    display: block;
-    position: absolute;
-    background-color: #000;
-    height: 3px;
-    width: 22px;
-    top: 50%;
-    right: 0;
-    /* transform: translateY(-50%); */
-    transition: all 0.35s ease-in-out;
-  }
-  .humberger::before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0px;
-    height: 3px;
-    width: 22px;
-    background-color: #000;
-    right: 0;
-  }
-  .humberger::after {
-    content: '';
-    display: block;
-    position: absolute;
-    bottom: 0;
-    height: 3px;
-    width: 22px;
-    background-color: #000;
-    right: 0;
-  }
-  
-  .humberger.open span {
-    opacity: 0;
-  }
-  .humberger.open::before,
-  .humberger.open::after {
-    width: 30px;
-    transition: all 0.25s ease-in-out;
-    transition-delay: 0.1s;
-  }
-  .humberger.open::before {
-    transform: rotate(-45deg) translateY(12px);
-  }
-  .humberger.open::after {
-    transform: rotate(45deg) translateY(-12px);
-  }
-  .responsiveNav{
-    display: flex;
+  position: relative;
+  display: none;
+  left: -40px;
+  top: 8px;
+  width: 30px;
+  height: 20px;
+  z-index: 103;
+  cursor: pointer;
+  transition: right 0.25s ease-in-out;
+}
+
+.humberger span {
+  display: block;
+  position: absolute;
+  background-color: #000;
+  height: 3px;
+  width: 22px;
+  top: 50%;
+  right: 0;
+  /* transform: translateY(-50%); */
+  transition: all 0.35s ease-in-out;
+}
+.humberger::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0px;
+  height: 3px;
+  width: 22px;
+  background-color: #000;
+  right: 0;
+}
+.humberger::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  height: 3px;
+  width: 22px;
+  background-color: #000;
+  right: 0;
+}
+
+.humberger.open span {
+  opacity: 0;
+}
+.humberger.open::before,
+.humberger.open::after {
+  width: 30px;
+  transition: all 0.25s ease-in-out;
+  transition-delay: 0.1s;
+}
+.humberger.open::before {
+  transform: rotate(-45deg) translateY(12px);
+}
+.humberger.open::after {
+  transform: rotate(45deg) translateY(-12px);
+}
+.responsiveNav {
+  display: flex;
   justify-content: center;
   align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .humberger {
+    display: block;
+    top: 40px;
   }
-  @media screen and (max-width: 768px) {
-    .humberger {
-      display: block;
-      top: 40px;
-    } 
-    .responsiveNav {
-        position: fixed;
-        z-index: 101;
-        top: 0;
-        bottom: 0;
-        left: -200%;
-        transition: left 0.5s ease-in-out;
-        padding-top: 85px;
-        flex-basis: unset;
-        width: 50vw;
-        min-width: 350px;
-        max-width: 750px;
-        background-color: #fff;
-        box-shadow: 0 0 10px rgba(175, 175, 175, 0.3);
-      }
-      .responsiveNav li{
-        margin-bottom: 8px;
-      }
-      .responsiveNav.open {
-        left: 0;
-      }
+  .responsiveNav {
+    position: fixed;
+    z-index: 101;
+    top: 0;
+    bottom: 0;
+    left: -200%;
+    transition: left 0.5s ease-in-out;
+    padding-top: 85px;
+    flex-basis: unset;
+    width: 50vw;
+    min-width: 350px;
+    max-width: 750px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(175, 175, 175, 0.3);
   }
-  
+  .responsiveNav li {
+    margin-bottom: 8px;
+  }
+  .responsiveNav.open {
+    left: 0;
+  }
+}

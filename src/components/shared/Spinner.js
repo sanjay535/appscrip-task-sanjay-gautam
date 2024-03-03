@@ -5,8 +5,7 @@ function Spinner() {
     <div className={classes.spinnerContainer}>
       <span className={classes.loader}></span>
     </div>
-    
-  )
+  );
 }
 
-export default Spinner
+export default Spinner;
