@@ -1,10 +1,15 @@
 import Container from "@/components/Container";
+import { getProducts } from "@/service";
+
+export default async function Home() {
+  const products = await getProducts();
 
 
-export default function Home({children}) {
+  console.log(products)
   return (
    <main>
-    <Container/>
+    <Container products={products}/>
    </main>
   );
 }
+

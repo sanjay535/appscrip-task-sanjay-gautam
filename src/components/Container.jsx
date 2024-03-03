@@ -2,13 +2,12 @@ import React from 'react'
 import Header from './Header'
 import Filters from './Filter'
 
-const Container = () => {
+const Container = ({products}) => {
   
   return (
     <div>
       <Header/>
-      <Filters/>
-      
+      <Filters products={products}/>
     </div>
   )
 }

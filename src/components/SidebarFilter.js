@@ -23,7 +23,7 @@ const SideBarItem = ({title,categories}) => {
             {isFilterExpanded?<Image className='mx-1' src={'/assets/up.svg'} alt='up' width={24} height={24} />:
             <Image className='mx-1' src={'/assets/down.svg'} alt='down' width={24} height={24} />}
         </button>
-        <div className={`-z-20 transition-all relative ${isFilterExpanded?' opacity-1 top-0 block h-full':' opacity-0 top-[-2200px] h-0'}`}>
+        <div className={`z-20 transition-all relative ${isFilterExpanded?' opacity-1 top-0 block h-full':' opacity-0 top-[-1200px] h-0'}`}>
         <button className='underline text-[#BFC8CD] my-3'>Unselect all</button>
         <div>
             {categories.map((category,index)=><div key={index} className='my-2 flex'>

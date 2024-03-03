@@ -1,9 +1,10 @@
-import { PRODUCT_LIST } from "@/constant";
+// import { PRODUCT_LIST } from "@/constant";
 import ProductCard from "./shared/ProductCard";
 
-function ProductListing() {
+function ProductListing({products}) {
+    console.log(products)
     return <>
-        {PRODUCT_LIST.map(product => <ProductCard key={product.id} product={product} />)}
+        {products.map(product => <ProductCard key={product.id} product={product} />)}
     </>
 }
 export default ProductListing;
